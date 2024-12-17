@@ -1,21 +1,45 @@
-        main {
-            display: flex;
-            flex-direction: row;
-            flex: auto;
-        }
-        
-        body {
-            display: flex;
-            flex-direction: column;
-            flex: auto;
-        }
-        
-        article {
-            flex: 2;
-            overflow-y: auto;
-        }
-        
-        aside {
-            flex: 1;
-            overflow-y: auto;
-        }
+            main {
+                display: flex;
+                flex-direction: row;
+                flex: auto;
+            }
+            
+            body {
+                display: flex;
+                flex-direction: column;
+                flex: auto;
+            }
+            
+            article {
+                flex: 2;
+                overflow-y: auto;
+                background-color: beige;
+            }
+            
+            aside {
+                flex: 1;
+                overflow-y: auto;
+                background-color: rgb(135, 148, 148);
+            }
+            
+            .works_on_smartphone {
+                background-color: rgb(179, 233, 235);
+            }
+            
+            table {
+                border-color: brown;
+            }
+            
+            h1,
+            h2,
+            h3 {
+                color: rgb(6, 128, 128);
+            }
+            
+            .logo {
+                font-size: 36px;
+            }
+            
+            footer {
+                background-color: rgb(182, 123, 238);
+            }
