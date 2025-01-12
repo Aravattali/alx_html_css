@@ -1,0 +1,59 @@
+/* General Styles */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background: #141e30;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Results Section */
+
+.results {
+    background: #fff;
+    color: #333;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.results h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.results p {
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.stats div {
+    text-align: center;
+    padding: 10px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stats h3 {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+.stats p {
+    font-size: 1rem;
+    color: #555;
+}
