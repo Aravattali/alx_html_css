@@ -1,3 +1,5 @@
+/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +21,9 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+
+/* Hero Section */
 
 .hero-content {
     background: url('images/headphones_hero_1.jpg') no-repeat center center/cover;
@@ -88,6 +93,9 @@ body {
     opacity: 0.9;
 }
 
+
+/* What We Do Section */
+
 .what-we-do {
     padding: 80px 20px;
     text-align: center;
@@ -98,6 +106,7 @@ body {
     font-size: 2.5rem;
     margin-bottom: 30px;
     color: white;
+    animation: fadeIn 1s ease-out;
 }
 
 .services {
@@ -113,12 +122,19 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
+    transition: transform 0.3s ease;
+    animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+.service:hover {
+    animation: scaleUp 0.3s ease-out;
 }
 
 .service i {
     font-size: 3rem;
     color: #d21414;
     margin-bottom: 15px;
+    animation: rotateEffect 4s linear infinite;
 }
 
 .service h3 {
@@ -144,6 +160,9 @@ body {
     }
 }
 
+
+/* Our Results Section */
+
 .our-results {
     padding: 50px 20px;
     text-align: center;
@@ -157,6 +176,7 @@ body {
     font-size: 2.5rem;
     margin-bottom: 30px;
     color: white;
+    animation: fadeIn 1s ease-out;
 }
 
 .results {
@@ -172,6 +192,11 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 200px;
     text-align: center;
+    animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+.result:hover {
+    animation: bounce 1s infinite;
 }
 
 .result h3 {
@@ -195,6 +220,9 @@ body {
     }
 }
 
+
+/* FadeIn Animation */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -205,6 +233,48 @@ body {
         transform: translateY(0);
     }
 }
+
+
+/* Scale Up Animation */
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/* Bounce Animation */
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* Rotate Animation */
+
+@keyframes rotateEffect {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Contact Us Section */
 
 .contact-us {
     padding: 50px 40px;
@@ -280,5 +350,92 @@ body {
 @media (max-width: 480px) {
     .contact-form {
         width: 90%;
+    }
+}
+
+
+/* Footer Styling */
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 14px;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links li a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-links li a img:hover {
+    transform: scale(1.1);
+}
+
+.footer-logo {
+    margin-left: 0;
+}
+
+.footer-logo img {
+    width: 120px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 16px;
+}
+
+.footer-links li a:hover {
+    color: var(--primary-color);
+}
+
+.footer-copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-logo {
+        margin-bottom: 20px;
     }
 }

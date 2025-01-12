@@ -1,3 +1,5 @@
+/* General Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +21,9 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+
+/* Hero Section */
 
 .hero-content {
     background: url('images/headphones_hero_1.jpg') no-repeat center center/cover;
@@ -88,6 +93,9 @@ body {
     opacity: 0.9;
 }
 
+
+/* What We Do Section */
+
 .what-we-do {
     padding: 80px 20px;
     text-align: center;
@@ -144,11 +152,14 @@ body {
     }
 }
 
+
+/* Our Results Section */
+
 .our-results {
     padding: 50px 20px;
     text-align: center;
-    background: url('images/headphones_hero_1.jpg') no-repeat center center/cover;
-    background-size: cover;
+    background-color: transparent;
+    /* إزالة الخلفية */
     min-height: 100vh;
     color: white;
 }
@@ -166,12 +177,33 @@ body {
 }
 
 .result {
-    background: rgba(159, 11, 11, 0.8);
-    padding: 40px;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    /* تحديد ارتفاع وعرض العنصر */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(159, 11, 11, 0.8);
+    padding: 20px;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    text-align: center;
+}
+
+.result::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(00deg);
+    width: 180px;
+    height: 180px;
+    background-color: transparent;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    background-color: #FF6565;
+    z-index: -1;
 }
 
 .result h3 {
@@ -195,6 +227,9 @@ body {
     }
 }
 
+
+/* FadeIn Animation */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -205,6 +240,9 @@ body {
         transform: translateY(0);
     }
 }
+
+
+/* Contact Us Section */
 
 .contact-us {
     padding: 50px 40px;
@@ -280,5 +318,92 @@ body {
 @media (max-width: 480px) {
     .contact-form {
         width: 90%;
+    }
+}
+
+
+/* Footer Styling */
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+..footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 14px;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links li a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-links li a img:hover {
+    transform: scale(1.1);
+}
+
+.footer-logo {
+    margin-left: 0;
+}
+
+.footer-logo img {
+    width: 120px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 16px;
+}
+
+.footer-links li a:hover {
+    color: var(--primary-color);
+}
+
+.footer-copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-logo {
+        margin-bottom: 20px;
     }
 }
